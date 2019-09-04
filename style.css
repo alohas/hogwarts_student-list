@@ -13,6 +13,10 @@
   src: url(Hogww___.ttf);
 }
 
+html {
+  background-color: bisque;
+}
+
 h1 {
   font-family: harrypotter;
   text-align: center;
@@ -24,7 +28,8 @@ h2 {
 }
 
 h3.name,
-h4 {
+h4,
+#close {
   font-family: inkpot;
 }
 
@@ -48,14 +53,64 @@ li {
   z-index: 10;
 }
 
-.modal-background {
-  background-color: dimgrey;
-  border: 1px solid red;
-  margin: 1em;
-  padding: 2em;
+.modal-content {
+  max-height: 100%;
+  margin: 3em 2em;
+  background-color: bisque;
+  padding: 0 2em;
+  padding-bottom: 1em;
+}
+
+#close {
+  border: none;
+  background-color: initial;
+  cursor: pointer;
+  font-size: 30px;
+  color: black;
+}
+
+#close:hover {
+  color: firebrick;
+}
+
+.image-container {
+  display: grid;
+  grid-template-areas: "photo crest";
+  grid-gap: 1em;
+}
+
+.photo {
+  grid-area: photo;
+  max-width: 100%;
+  margin: auto auto;
+}
+.crest {
+  grid-area: crest;
+  max-width: 100%;
+  margin: auto auto;
 }
 
 h3,
 h4 {
   pointer-events: none;
+}
+
+div.interactive {
+  margin: auto 0;
+}
+
+select,
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  font-family: hogw;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: darkred;
+  cursor: default;
 }

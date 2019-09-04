@@ -2,11 +2,13 @@ const template = document.querySelector("#myTemp").content;
 const link = "https://petlatkea.dk/2019/students1991.json";
 const parent = document.querySelector("ul.fulllist");
 const modal = document.querySelector(".bg-modal");
+const modalbg = document.querySelector(".modal-content");
 const xbtn = document.querySelector("#close");
-const dropdown = document.querySelector("#flist > select");
+const dropdown = document.querySelector("#flist > div > select");
 let studentData = [];
 let filteredData = [];
 document.querySelector("#reverse").disabled = true;
+const crest = document.querySelector(".crest");
 
 window.addEventListener("DOMContentLoaded", init(link));
 
@@ -54,6 +56,27 @@ function popModal(idName) {
   //console.log(filteredStudent);
   document.querySelector(".modal-name").textContent = filteredStudent.fullname;
   document.querySelector(".modal-house").textContent = filteredStudent.house;
+  if (filteredStudent.house === "Gryffindor") {
+    crest.src = "Gryffindor.png";
+    modalbg.style.backgroundImage = "linear-gradient(#7F0909, #FFC500)";
+    modalbg.style.color = "black";
+  }
+  if (filteredStudent.house === "Ravenclaw") {
+    crest.src = "Ravenclaw.png";
+    modalbg.style.backgroundImage = "linear-gradient(#000A90, #946B2D)";
+    modalbg.style.color = "black";
+  }
+
+  if (filteredStudent.house === "Slytherin") {
+    crest.src = "Slytherin.png";
+    modalbg.style.backgroundImage = "linear-gradient(#0D6217, #AAAAAA)";
+    modalbg.style.color = "black";
+  }
+  if (filteredStudent.house === "Hufflepuff") {
+    crest.src = "Hufflepuff.png";
+    modalbg.style.backgroundImage = "linear-gradient(#EEE117, #000000)";
+    modalbg.style.color = "white";
+  }
 }
 
 xbtn.addEventListener("click", closeModal);
@@ -72,8 +95,8 @@ dropdown.addEventListener("change", function() {
     );
     //console.log(filteredData);
     showData(filteredData);
-    document.querySelector("#reverse").disabled = true;
   }
+  document.querySelector("#reverse").disabled = true;
 });
 
 document.querySelector("#fname").addEventListener("click", sortByF);

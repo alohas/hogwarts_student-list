@@ -17,28 +17,33 @@
   
     <section id="flist">
         <h2>List of students enrolled at Hogwarts in 1991</h2>
-        <select>
-          <option value="All">All</option>
-          <option value="Gryffindor">Gryffindor</option>
-          <option value="Slytherin">Slytherin</option>
-          <option value="Hufflepuff">Hufflepuff</option>
-          <option value="Ravenclaw">Ravenclaw</option>
-        </select>
-        <button id="fname">First Name</button>
-        <button id="lname">Last Name</button>
-        <button disabled id="reverse">Reverse</button>
-        <ul class="fulllist"></ul>
+        <div class="interactive">
+          <select>
+            <option value="All">All</option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Slytherin">Slytherin</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+          </select>
+          <button id="fname">First Name</button>
+          <button id="lname">Last Name</button>
+          <button disabled id="reverse">Reverse</button>
+      </div>
+      <ul class="fulllist"></ul>
+        
     </section>
 
 
 
     <div class="bg-modal hide">
       <article class="modal-content">
-         <button id="close">X</button>
+          <button id="close">X</button>
+          <div class="image-container">
+          <img class="photo" src="porfile.jpg" alt="photo">
+          <img class="crest" src="" alt="crest">
+        </div>
           <h3 class="modal-name name"></h3>
           <h4 class="modal-house"></h4>
-          <img class="photo" src="" alt="photo">
-          <img class="crest" src="" alt="crest">
       </article>
   </div>
 
