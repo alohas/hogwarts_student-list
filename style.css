@@ -1,0 +1,61 @@
+@font-face {
+  font-family: harrypotter;
+  src: url(HARRYP__.TTF);
+}
+
+@font-face {
+  font-family: inkpot;
+  src: url(Inkpot.ttf);
+}
+
+@font-face {
+  font-family: hogw;
+  src: url(Hogww___.ttf);
+}
+
+h1 {
+  font-family: harrypotter;
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: hogw;
+}
+
+h3.name,
+h4 {
+  font-family: inkpot;
+}
+
+li {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.bg-modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-background {
+  background-color: dimgrey;
+  border: 1px solid red;
+  margin: 1em;
+  padding: 2em;
+}
+
+h3,
+h4 {
+  pointer-events: none;
+}
