@@ -114,3 +114,8 @@ button:disabled {
   background-color: darkred;
   cursor: default;
 }
+
+.wrap img {
+  display: block;
+  margin: 0 auto;
+}
