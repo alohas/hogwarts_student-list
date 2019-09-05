@@ -88,7 +88,8 @@ function closeModal() {
 dropdown.addEventListener("change", function() {
   //console.log(dropdown.value);
   if (dropdown.value == "All") {
-    showData(studentData);
+    filteredData = studentData;
+    showData(filteredData);
   } else {
     filteredData = studentData.filter(
       studentObject => studentObject.house === dropdown.value
